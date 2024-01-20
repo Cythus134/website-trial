@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REAL ESTATE WEBSITE/FLOOR PLAN</title>
+  <style>
+    body {
+      background-image: url('HEADER.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .main {
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: 0;
+      background-size: auto;
+      background-size: cover;
+      background-color: #FFFAF0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin-bottom: 0px;
+      padding: 100px;
+    }
+
+    .footer {
+      background-color: #E85A4F;
+      padding: 5px;
+      margin-top: 0px;
+    }
+
+    h1 {
+      color: #E85A4F;
+      text-align: center;
+      font-weight: bold;
+      font-size: 4em;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+      padding-top: 1px;
+    }
+
+    p {
+      color: #44433F;
+      text-align: justify;
+      font-size: 2em;
+      margin-bottom: 20px;
+      margin-left: 100px;
+      margin-right: 100px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+    }
+
+    hr {
+      border-width: 2px;
+      border-color: transparent;
+      background-color: #fff;
+      margin: 20px 0;
+    }
+
+    h2 {
+      color: #E85A4F;
+      text-align: center;
+      font-size: 2.5em;
+    }
+
+    h3 {
+      color: #FEFAEE;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 2px;
+      background-color: #E85A4F;
+      padding: 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    a {
+      color: #5A2A00;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      font-size: 1.5em;
+      margin-right: 100px;
+      margin-left: 120px;
+      margin-bottom: 120px;
+      display: inline-block;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .text-with-image {
+      overflow: auto;
+      margin-bottom: 20px;
+    }
+
+    .text-with-image p {
+      color: #5A2A00;
+      text-align: justify;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    nav {
+      text-align: center;
+      padding: 3px;
+    }
+
+    nav a {
+      color: #EAE7DC;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      background-color: transparent;
+      border: 3px solid darkslategrey;
+      border-radius: 20px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 30px;
+      cursor: pointer;
+      display: block;
+      width: 200px;
+      height: 75px;
+      margin: 20px auto;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #E85A4F;
+      color: white;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    .paragraph {
+      color: #44433F;
+      text-align: justify;
+      font-size: 20px;
+      margin-bottom: 20px;
+      margin-left: 50x;
+      margin-right: 50x;
+      font-family: 'Poppins', sans-serif;
+      width: 50%;
+      margin-left: 0px;
+    }
+
+    .design {
+      color: #0C391F;
+      font-size: 45px;
+      font-weight: bold;
+      text-align: justify;
+      margin-bottom: 20px;
+      margin-left: 100px;
+      margin-right: 100px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .rectangle-container {
+      border: 2px solid #E85A4F;
+      padding: 20px;
+      width: 1300px;
+      margin: 0 auto;
+      background-color: #E85A4F;
+    }
+
+    .image_table {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px;
+      background-color: #FFFAF0;
+      padding: 100px;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 30px;
+      color: #44433F;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    fieldset {
+      width: 500px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    #text {
+      width: 400px;
+      height: 30px;
+    }
+
+    #text1 {
+      width: 400px;
+      height: 200px;
+    }
+
+    label.radiolabel1 {
+      margin-bottom: 5px;
+      font-size: 30px;
+      color: #44433F;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+    }
+
+    label.radiolabel1 + label {
+      font-size: 30px;
+      display: flex;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #f44336;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #f44336;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      margin-right: 10px;
+    }
+
+    fieldset {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <hr style="margin: 3px">
+  <nav style="display: flex; justify-content: space-around; padding: 2px">
+    <a href="Atanacio.htm" target="_blank">Home</a>
+    <a href="page2.htm" target="_blank">Floor plan</a>
+    <a href="page3.htm" target="_blank">Forms</a>
+  </nav>
+  <hr style="margin-top: 5px; margin-bottom: 3px">
+  <h1 style="margin: 8px; margin-top: 0px; font-size: 90px;"><br>Floor Plan <br><br>
+  </h1>
+  <hr>
+  <section class="main">
+
+    <h2>Estate showing request form: </h2>
+    <div id="button" class="row">
+      <div class="paragraph">
+        <h3>Estate showing request form: </h3>
+
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="Lname">Last name</label>
+            <input type="text" id="text" required>
+            <label for="Fname">First name</label>
+            <input type="text" id="text" required>
+          </fieldset>
+          <fieldset>
+            <legend>Contact Information</legend>
+            <label for="contact">Contact number</label>
+            <input type="number" id="text" required>
+            <label for="Email">Email Adress</label>
+            <input type="text" id="text" required>
+            <br>
+            <label class="radiolabel1" for="Prefer">Preferred mode of contact</label>
+            <input class="radio" type="radio" id="emailOption" name="contactOption">
+            <label for="emailOption">Email</label>
+            <input type="radio" id="phoneOption" name="contactOption">
+            <label for="phoneOption">Phone</label>
+          </fieldset>
+          <fieldset>
+            <legend>Preferences</legend>
+            <label>Showing ID</label>
+            <input type="text" id="text" required>
+            <br>
+            <label>Preffered time for showing</label>
+            <select id="text" id="dropdown">
+              <option value=""></option>
+              <option>morning</option>
+              <option>afternoon</option>
+              <option>Evening</option>
+            </select>
+            <br>
+            <label>Number of guests</label>
+            <input id="text" type="number">
+            <br>
+            <label>date</label>
+            <input id="text" type="date">
+            <label for="location">Select a state:</label>
+            <select id="text" id="location" name="location">
+              <option value=""></option>
+              <option value="alabama">Alabama</option>
+              <option value="alaska">Alaska</option>
+              <option value="arizona">Arizona</option>
+              <option value="arkansas">Arkansas</option>
+              <option value="california">California</option>
+              <option value="colorado">Colorado</option>
+              <option value="connecticut">Connecticut</option>
+              <option value="delaware">Delaware</option>
+            </select>
+            <br>
+            <label class="radiolabel1">Show more options in the area?</label>
+            <div class="show-options">
+              <input class="radio" type="radio" id="yesOption" name="options">
+              <label for="yesOption">Yes</label>
+
+              <input class="radio" type="radio" id="noOption" name="options">
+              <label for="noOption">No</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Requirements</legend>
+            <label>property style</label>
+            <select id="text" name="location">
+              <option value=""></option>
+              <option value="alabama">Condominium</option>
+              <option value="alabama">House</option>
+            </select>
+            <br>
+            <label>
+              <input type="checkbox" name="allowsChildren"> Allows Children
+            </label><br>
+            <label>
+              <input type="checkbox" name="allowsPets"> Allows Pets
+            </label><br>
+            <label>
+              <input type="checkbox" name="fullyFurnished"> Fully Furnished
+            </label>
+            <br>
+            <label for="text1">Any suggestions/concerns:</label>
+            <br>
+            <input type="text" id="text1" name="text1">
+          </fieldset>
+          <div style="margin-left: 30px;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+                            </div>
+    </form>
+      </div>
+        <hr>
+      <div class="paragraph">
+          <h3> Listing Request form</h3>
+          <form>
+<fieldset>            
+       <legend>Personal Information</legend>   
+
+          <label for="Lname">Last name</label>
+    <input type="text" id="text" required>
+  <label for="Fname">First name</label>
+    <input type="text" id="text" required>
+    </fieldset>
+    <fieldset>
+        <legend>Contact Information</legend>
+    <label for="contact">Contact number</label>
+    <input type="number" id="text" required>
+            <label for="Email">Email Adress</label>
+            <input type="text"  id="text" required>
+                   <br>
+   <label class="radiolabel1" for="Prefer">Preferred mode of contact</label>
+<input class="radio" type="radio" id="emailOption" name="contactOption">
+<label for="emailOption">Email</label>
+<input type="radio" id="phoneOption" name="contactOption">
+<label for="phoneOption">Phone</label>
+
+
+</fieldset>
+<fieldset> 
+    <legend>Preferences</legend>
+    <label>Listing type</label>
+<select type="dropdown" id="text">
+     <option value=""></option>
+    <option>For lease</option>
+    <option >For sale</option>
+    
+    </select>
+        <br>
+    <label>Preffered time for showing</label>
+<select id="text" id="dropdown">
+              <option value=""></option>
+
+     <option>morning</option>
+    <option>afternoon</option>
+
+        <option>Evening</option>
+          </select> 
+
+
+    <br>
+    <label>date availability</label>
+<input id="text" type="date">
+    <label for="location">Select a state:</label>
+  <select id="text" id="location" name="location">
+          <option value=""></option>
+    <option value="alabama">Alabama</option>
+    <option value="alaska">Alaska</option>
+    <option value="arizona">Arizona</option>
+    <option value="arkansas">Arkansas</option>
+    <option value="california">California</option>
+    <option value="colorado">Colorado</option>
+    <option value="connecticut">Connecticut</option>
+    <option value="delaware">Delaware</option>
+    </select>
+    <br>
+    <label class="radiolabel1">Ready for move in?</label>
+<div class="show-options">
+  <input class="radio" type="radio" id="yesOption" name="options">
+  <label for="yesOption">Yes</label>
+
+  <input class="radio" type="radio" id="noOption" name="options">
+  <label for="noOption">No</label>
+</div>
+
+</fieldset>
+     <fieldset>
+    <legend>Specifications</legend>
+         <label>property style</label>
+  <select id="text" name="location">
+          <option value=""></option>
+          <option value="alabama">Condominium</option>
+    <option value="alabama">House</option>
+         </select>
+         <br>
+           <label>
+    <input type="checkbox" name="allowsChildren"> Allows Children
+  </label><br>
+
+  <label>
+    <input type="checkbox" name="allowsPets"> Allows Pets
+  </label><br>
+
+  <label>
+    <input type="checkbox" name="fullyFurnished"> Fully Furnished
+  </label>
+         <label> number of rooms</label>
+         <input type="number" id="text" required>
+         <br>
+                  <label> number of bathrooms</label>
+         <input type="number" id="text" required>
+         <br>
+  <label for="text1">Any suggestions/concerns:</label>
+         <br>
+  <input type="text" id="text1" name="text1">
+    </fieldset>
+              <div style=" margin-left: 30px;">
+            <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+                            </div>
+
+    </form>
+      </div>
+    </div>
+ 
+
+    </section>
+<section class="footer">
+    <h3>All rights reserve 2023. <br> @REAL LIVING Real Estate </h3>
+    <br>
+  </section>
+</body>
+</html>
